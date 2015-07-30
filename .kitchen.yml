@@ -1,0 +1,25 @@
+---
+driver:
+  name: vagrant
+  provider: vmware_fusion
+  customize:
+      memory: 2048
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: macosx-10.10
+    driver:
+      box: dhoer/macosx-10.10
+suites:
+  - name: macosx_gui_login_test
+    run_list:
+    - recipe[macosx_gui_login_test::add]
+    - recipe[macosx_gui_login_test::login]
+#      - recipe[macosx_gui_login_test::setupsetup]
+#      - recipe[macosx_gui_login_test::insert]
+#      - recipe[macosx_gui_login_test::disable]
+#      - recipe[macosx_gui_login_test::enable]
+#      - recipe[macosx_gui_login_test::remove]
+    attributes:

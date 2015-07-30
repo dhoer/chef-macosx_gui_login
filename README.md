@@ -9,11 +9,11 @@
 [travis]: https://travis-ci.org/dhoer/chef-macosx_gui_login
 [github]: https://github.com/dhoer/chef-macosx_gui_login/issues
 
-Logs into Mac OS X GUI.
+This cookbook logs into Mac OS X GUI via AppleScript.
 
 ## Requirements
 
-- Chef 11 or higher
+- Chef 11.14 or higher (sensitive attribute introduced)
 
 ### Platforms
 
@@ -25,7 +25,7 @@ Include cookbook as a dependency before calling `macosx_gui_login` resource.
 
 ### Actions
 
-- `run` - Logs into GUI
+- `run` - Logs into GUI.
 
 ### Attributes
 

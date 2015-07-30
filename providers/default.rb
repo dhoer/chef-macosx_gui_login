@@ -9,7 +9,7 @@ action :run do
     if platform_family?('mac_os_x')
       privacy_services_manager 'allow remote login' do
         service 'accessibility'
-        user 'vagrant'
+        user new_resource.username
         applications %w(/System/Library/CoreServices/RemoteManagement/ARDAgent.app
                         /usr/libexec/sshd-keygen-wrapper)
         admin true
@@ -19,16 +19,16 @@ action :run do
         command 'sudo "/System/Library/CoreServices/Menu Extras/User.menu/Contents/Resources/CGSession" -suspend'
       end
 
-      execute 'login to gui' do
-        retries 1
-        # sensitive true
+      execute 'login to gui' do # ~FC009
+        retries 10
+        sensitive true
         command <<-EOF
           osascript -e '
           tell application "System Events"
-            keystroke "${new_resource.username}"
+            keystroke "#{new_resource.username}"
             keystroke return
             delay 3.0
-            keystroke "${new_resource.password}"
+            keystroke "#{new_resource.password}"
             delay 3.0
             keystroke tab
             keystroke return

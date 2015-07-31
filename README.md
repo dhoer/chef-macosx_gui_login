@@ -29,7 +29,7 @@ Include cookbook as a dependency before calling `macosx_gui_login` resource.
 
 ### Attributes
 
-- `username` (required) -  Username to login as.Defaults to the name of the resource block.
+- `username` (required) -  Username to login as. Defaults to the name of the resource block.
 - `password` (required) -  Password of user.
 
 ### Examples

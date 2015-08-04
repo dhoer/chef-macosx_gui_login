@@ -13,7 +13,7 @@ This cookbook logs into Mac OS X GUI via AppleScript.
 
 ## Requirements
 
-- Chef 11.14 or higher (sensitive attribute introduced)
+- Chef 12 or higher (you can use Chef 11, but sensitive attribute won't work)
 
 ### Platforms
 

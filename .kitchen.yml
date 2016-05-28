@@ -18,5 +18,3 @@ suites:
     run_list:
     - macosx_gui_login_test
     attributes:
-      macosx_gui_login:
-        user: 'vagrant'

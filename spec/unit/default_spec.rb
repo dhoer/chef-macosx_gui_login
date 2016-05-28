@@ -30,6 +30,6 @@ describe 'macosx_gui_login_test::default' do
   end
 
   it 'executes macosx_gui_login' do
-    expect(chef_run).to run_execute('login to gui').with(retries: 10, sensitive: true)
+    expect(chef_run).to run_execute('login to gui').with(retries: 10, sensitive: false)
   end
 end

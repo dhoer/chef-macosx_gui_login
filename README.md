@@ -29,8 +29,9 @@ Include cookbook as a dependency before calling `macosx_gui_login` resource.
 
 ### Attributes
 
-- `username` (required) -  Username to login as. Defaults to the name of the resource block.
-- `password` (required) -  Password of user.
+- `username` (required) - Username to login as. Defaults to the name of the resource block.
+- `password` (required) - Password of user.
+- `sensitive` - Suppress logging stdout and stderr to Chef-client.  Default: `true`.
 
 ### Examples
 
@@ -40,6 +41,7 @@ Login as vagrant user:
 macosx_gui_login 'login to vagrant user' do
   username 'vagrant'
   password 'vagrant'
+  sensitive true
   action :run
 end
 ```
@@ -53,8 +55,9 @@ Example Matcher Usage
 
 ```ruby
 expect(chef_run).to run_macosx_gui_login('login to vagrant user').with(
-  username: 'vagrant'
-  password: 'vagrant'
+  username: 'vagrant',
+  password: 'vagrant',
+  sensitive: true
 )
 ```
       
@@ -64,7 +67,7 @@ Cookbook Matchers
 
 ## Getting Help
 
-- Ask specific questions on [Stack Overflow](http://stackoverflow.com/questions/tagged/chef-macosx_gui_login).
+- Ask specific questions on [Stack Overflow](http://stackoverflow.com/questions/tagged/osascript).
 - Report bugs and discuss potential features in
 [Github issues](https://github.com/dhoer/chef-macosx_gui_login/issues).
 

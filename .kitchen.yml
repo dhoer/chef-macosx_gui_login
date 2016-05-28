@@ -14,7 +14,9 @@ platforms:
     driver:
       box: dhoer/macosx-10.10
 suites:
-  - name: macosx_gui_login_test
+  - name: default
     run_list:
-    - recipe[macosx_gui_login_test::default]
+    - macosx_gui_login_test
     attributes:
+      macosx_gui_login:
+        user: 'vagrant'

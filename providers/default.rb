@@ -21,7 +21,7 @@ action :run do
 
       execute 'login to gui' do # ~FC009
         retries 10
-        sensitive true
+        sensitive new_resource.sensitive
         command <<-EOF
           osascript -e '
           tell application "System Events"
@@ -37,7 +37,7 @@ action :run do
         EOF
       end
     else
-      log('Resource macosx_gui_login is not supported on this platform!') { level :warn }
+      Chef::Log.warn('Resource macosx_gui_login is not supported on this platform!')
     end
   end
 end

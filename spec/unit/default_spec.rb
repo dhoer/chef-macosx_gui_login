@@ -15,7 +15,8 @@ describe 'macosx_gui_login_test::default' do
       user: 'vagrant',
       applications: %w(/System/Library/CoreServices/RemoteManagement/ARDAgent.app
                        /usr/libexec/sshd-keygen-wrapper),
-      admin: true)
+      admin: true
+    )
   end
 
   it 'runs macosx_gui_login' do

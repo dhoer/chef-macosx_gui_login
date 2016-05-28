@@ -2,12 +2,9 @@
 
 [![Cookbook Version](http://img.shields.io/cookbook/v/macosx_gui_login.svg?style=flat-square)][cookbook]
 [![Build Status](http://img.shields.io/travis/dhoer/chef-macosx_gui_login.svg?style=flat-square)][travis]
-[![GitHub Issues](http://img.shields.io/github/issues/dhoer/chef-macosx_gui_login.svg?style=flat-square)]
-[github]
 
 [cookbook]: https://supermarket.chef.io/cookbooks/macosx_gui_login
 [travis]: https://travis-ci.org/dhoer/chef-macosx_gui_login
-[github]: https://github.com/dhoer/chef-macosx_gui_login/issues
 
 This cookbook logs into Mac OS X GUI via AppleScript.
 
